@@ -6,12 +6,12 @@ REM =========================================================================
 if not exist "results" mkdir results
 
 echo Running ResNet on uploaded_images...
-py -3.11 check_images.py --dir uploaded_images/ --arch resnet --dogfile dognames.txt > results\resnet_uploaded-images.txt
+python check_images.py --dir uploaded_images/ --arch resnet --dogfile dognames.txt > results\resnet_uploaded-images.txt
 
 echo Running AlexNet on uploaded_images...
-py -3.11 check_images.py --dir uploaded_images/ --arch alexnet --dogfile dognames.txt > results\alexnet_uploaded-images.txt
+python check_images.py --dir uploaded_images/ --arch alexnet --dogfile dognames.txt > results\alexnet_uploaded-images.txt
 
 echo Running VGG on uploaded_images...
-py -3.11 check_images.py --dir uploaded_images/ --arch vgg --dogfile dognames.txt > results\vgg_uploaded-images.txt
+python check_images.py --dir uploaded_images/ --arch vgg --dogfile dognames.txt > results\vgg_uploaded-images.txt
 
 echo Batch evaluation complete! Results saved in results\
